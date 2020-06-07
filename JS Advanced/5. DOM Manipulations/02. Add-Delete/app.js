@@ -22,4 +22,6 @@ function addItem() {
     function deleteItem() {
         li.remove();
     }
+
+    document.getElementById('newText').value = '';
 }
