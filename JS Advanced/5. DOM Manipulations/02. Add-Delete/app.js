@@ -1,6 +1,6 @@
 function addItem() {
     let text = document.getElementById('newText').value;
-    let listItems = document.getElementById('items');
+    let listOfItems = document.getElementById('items');
 
     if (text.length === 0) {
         return;
@@ -17,7 +17,7 @@ function addItem() {
     remove.addEventListener('click', deleteItem);
 
     li.appendChild(remove);
-    listItems.appendChild(li);
+    listOfItems.appendChild(li);
 
     function deleteItem() {
         li.remove();
