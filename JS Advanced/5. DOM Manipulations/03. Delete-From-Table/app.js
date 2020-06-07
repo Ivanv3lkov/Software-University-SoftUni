@@ -1,14 +1,15 @@
 function deleteByEmail(){
-    let emailTds = document.querySelectorAll('table tr td:nth-child(2)');
-    let deleted = false;
+        const emailTds = Array.from(document.querySelectorAll('#customers td:last-child'));
+        const emailInput = document.querySelector('input[name="email"]');
+        const resultDiv = document.getElementById('result');
 
-    for (let td of emailTds) {
-        if (td.textContent === document.getElementsByName('email')[0].value) {
-            td.parentNode.parentNode.removeChild(td.parentNode);
-            deleted = true;
-        }
-    }
+        resultDiv.textContent = '';
 
-    document.getElementById('result').textContent = deleted ? 'Deleted.' : 'Not found.';
+        const emailInputValue = emailInput.value;
+        if (!emailInputValue) {return;};
+        const td = emailTds.find(function (td) { return td.textContent === emailInputValue });
+        emailInput.value = '';
+        if (!td) {resultDiv.textContent = 'Not found.'; return;}
+        td.parentElement.remove();
+        resultDiv.textContent = 'Deleted.'
 }
-
