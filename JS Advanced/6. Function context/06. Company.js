@@ -41,7 +41,7 @@ class Company {
             dep.averageSalary = total / dep.employees.length;
             return dep;
         });
-        departments.sort((a, b) => b.averageSalary - a.avaerageSalary);
+        departments.sort((a, b) => b.averageSalary - a.averageSalary);
 
         const best = departments[0];
         if (best !== undefined) {
