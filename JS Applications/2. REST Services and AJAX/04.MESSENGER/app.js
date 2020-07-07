@@ -5,38 +5,40 @@ function attachEvents() {
     let contentElement = document.getElementById("content");
     let chatHistory = document.getElementById("messages");
 
-    refreshBtn.addEventListener("click", function(){
+    refreshBtn.addEventListener("click", function () {
         fetch("https://rest-messanger.firebaseio.com/messanger.json")
-        .then(res=>res.json())
-        .then(data=>{
-            Object.entries(data)
-            .forEach(([key,msgData])=>{
-                let {author, content} = msgData;
-                let textToAdd = `${author}: ${content}\n`;
-                chatHistory.value += textToAdd;
+            .then(res => res.json())
+            .then(data => {
+                Object.entries(data)
+                    .forEach(([key, msgData]) => {
+                        let { author, content } = msgData;
+                        let textToAdd = `${author}: ${content}\n`;
+                        chatHistory.value += textToAdd;
+                    });
+            })
+            .catch(err => {
+                console.log(err);
             });
-        })
-        .catch(err=>{
-            console.log(err);
-        });
     });
 
-    sendBtn.addEventListener("click",function(){
+    sendBtn.addEventListener("click", function () {
         let author = authorElement.value;
         let content = contentElement.value;
 
-        if(author && content) {
+        if (author && content) {
             let headers = {
-                method : "POST",
-                headers : {"Content-Type" : "application/json"},
-                body : JSON.stringify({author, content})
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ author, content })
             };
-    
-            fetch("https://rest-messanger.firebaseio.com/messanger.json",headers)
-            .then(()=>{
-                authorElement.value = "";
-                contentElement.value = "";
-            });
+
+            fetch("https://rest-messanger.firebaseio.com/messanger.json", headers)
+                .then(() => {
+                    authorElement.value = "";
+                    contentElement.value = "";
+                });
         }
     });
 }
+
+attachEvents();
