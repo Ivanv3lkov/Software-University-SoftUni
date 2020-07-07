@@ -1,11 +1,33 @@
 function solve() {
+    let infoSpan = document.querySelector("#info > span");
+    let departBtn = document.querySelector("#depart");
+    let arriveBtn = document.querySelector("#arrive");
+
+    let currentStopID = "depot";
+    let stopName;
 
     function depart() {
-        console.log('Depart TODO...');
+        fetch(`https://judgetests.firebaseio.com/schedule/${currentStopID}.json`)
+        .then(res=>res.json())
+        .then(data =>{
+            let {name, next} = data;
+            stopName = name;
+            currentStopID = next;
+            infoSpan.textContent = `Next stop ${stopName}`;
+            departBtn.disabled = true;
+            arriveBtn.disabled = false;
+        })
+        .catch(err =>{
+            infoSpan.textContent = "Error";
+            departBtn.disabled = true;
+            arriveBtn.disabled = true;
+        });
     }
 
     function arrive() {
-        console.log('Arrive TODO...');
+        departBtn.disabled = false;
+        arriveBtn.disabled = true;
+        infoSpan.textContent = `Arriving at ${stopName}`;
     }
 
     return {
