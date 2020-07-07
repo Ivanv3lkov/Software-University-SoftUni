@@ -8,20 +8,20 @@ function solve() {
 
     function depart() {
         fetch(`https://judgetests.firebaseio.com/schedule/${currentStopID}.json`)
-        .then(res=>res.json())
-        .then(data =>{
-            let {name, next} = data;
-            stopName = name;
-            currentStopID = next;
-            infoSpan.textContent = `Next stop ${stopName}`;
-            departBtn.disabled = true;
-            arriveBtn.disabled = false;
-        })
-        .catch(err =>{
-            infoSpan.textContent = "Error";
-            departBtn.disabled = true;
-            arriveBtn.disabled = true;
-        });
+            .then(res => res.json())
+            .then(data => {
+                let { name, next } = data;
+                stopName = name;
+                currentStopID = next;
+                infoSpan.textContent = `Next stop ${stopName}`;
+                departBtn.disabled = true;
+                arriveBtn.disabled = false;
+            })
+            .catch(err => {
+                infoSpan.textContent = "Error";
+                departBtn.disabled = true;
+                arriveBtn.disabled = true;
+            });
     }
 
     function arrive() {
