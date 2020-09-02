@@ -1,2 +1,2 @@
 # Software-University-SoftUni-
-SoftUni Courses
+Software University Course Exercises And Exams Solutions
