@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>Customer Details</legend>
+        <label>First Name
+            <input type="text" placeholder="George" autofocus></label><br><br>
+        <label>Last Name
+            <input type="text" placeholder="Devis"></label><br><br>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label><br><br>
+        <label>Preferred contact method:</label>
+        <label><input type="radio" name="method" value="email"> Email</label>
+        <label><input type="radio" name="method" value="phone"> Phone</label><br><br>
+        <label>Email
+            <input type="email" placeholder="your@email.com"></label><br><br>
+        <label>Phone
+            <input type="text" placeholder="+359885236225"></label><br><br>
+        <label>Town <select>
+            <option value="varna">Varna</option>
+            <option value="plovdiv">Plovdiv</option>
+            <option value="burgas">Burgas</option>
+            <option value="sofia">Sofia</option>
+            <option value="pleven">Pleven</option>
+        </select></label><br><br>
+        <label>Age <input type="number" min="18" max="70"></label><br><br>
+        <label>Programming language <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Java">
+                <option value="PHP">
+                <option value="C#">
+                <option value="JavaScript">
+                <option value="Python">
+                <option value="Ruby">
+                <option value="Other">
+            </datalist></label><br><br>
+        <label> <textarea rows="5" cols="20" placeholder="More information..."></textarea> </label><br><br>
+        <label><input type="checkbox" value="checked">I agree the Terms and Conditions</label><br><br>
+        <label> <input type="button" value="Send"></label>
+    </fieldset>
+</form>
+</body>
+</html>
