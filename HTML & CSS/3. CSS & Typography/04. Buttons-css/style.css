@@ -41,3 +41,6 @@ button.hover.fill.button:hover {
     color: rgb(251, 251, 251);
 }
 
+i {
+    padding-right: 0.5em;
+}
