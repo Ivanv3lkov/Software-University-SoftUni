@@ -1,0 +1,43 @@
+@import url('css/all.css');
+
+body {
+    background-color: rgb(228, 228, 228);
+}
+
+body button, a.button {
+    cursor: pointer;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+a.button, button {
+    margin: 10px;
+    width: 125px;
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    border-radius: 25px;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    border: 2px solid rgb(51, 51, 51);
+}
+
+a.button.fill, button.fill{
+    background-color: rgb(51, 51, 51);
+    color: rgb(251, 251, 251);
+}
+
+a.button.hover:hover, .hover.button:hover {
+    border: 2px solid rgb(0, 102, 0);
+}
+
+.hover.button:hover {
+    background-color: rgb(251, 251, 251);
+    color: rgb(0, 102, 0);
+}
+
+button.hover.fill.button:hover {
+    background: rgb(0, 102, 0);
+    color: rgb(251, 251, 251);
+}
+
