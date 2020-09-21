@@ -1,0 +1,31 @@
+@import url('css/all.css');
+
+body {
+    padding: 30px;
+}
+
+p > a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+p {
+    margin: 20px;
+    width: 110px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+body p:first-child {
+    background-color: green;
+}
+
+body p:last-child {
+    background-color: orange;
+}
+
+p > a > i {
+    font-family: FontAwesome;
+    font-style: normal;
+}
