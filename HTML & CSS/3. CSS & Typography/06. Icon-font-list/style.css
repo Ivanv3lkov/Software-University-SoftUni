@@ -1,1 +1,14 @@
 @import url('css/all.css');
+
+body {
+    padding: 30px;
+}
+
+.icons {
+    list-style-type: none;
+    font-family: FontAwesome;
+}
+
+i {
+    font-style: normal;
+}
