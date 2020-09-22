@@ -1,0 +1,48 @@
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5%
+}
+
+body h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr:nth-child(odd) td {
+    background: rgb(241, 241, 241);
+}
+
+table, td, th {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+table tr:nth-child(odd):hover td {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+table thead {
+    background: rgb(221, 221, 221);
+    text-align: left;
+}
+
+div {
+    margin-left: 30px;
+    border-left: 2px solid rgb(221,221,221);
+}
+
+body blockquote {
+    font-style: italic;
+}
+
+div blockquote p:last-child {
+    text-align: right;
+}
+
+
