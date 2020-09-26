@@ -1,0 +1,39 @@
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+body {
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+header h1 {
+    display: inline-block;
+}
+
+nav > ul > li, nav {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(132, 199, 31);
+    margin-right: 50px;
+}
+
+nav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+main h1 {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.2;
+}
