@@ -1,0 +1,12 @@
+html {
+    margin: 100px;
+}
+
+p {
+  width: 200px;
+  padding: 20px;
+  margin: auto;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: rgb(64, 224, 208);
+}
