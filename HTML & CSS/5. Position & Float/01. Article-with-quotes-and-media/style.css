@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+   font-size: 16px;
+   line-height: 1.5;
+   font-family: Helvetica, sans-serif;
+   background-color: lightgrey;
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+img {
+    float: right;
+    border: 5px solid black;
+    padding: 0.5em;
+    background-color: white;
+}
