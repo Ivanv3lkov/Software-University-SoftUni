@@ -1,22 +1,52 @@
-* {
-    box-sizing: border-box;
-}
-
-
 html {
-   font-size: 16px;
-   line-height: 1.5;
-   font-family: Helvetica, sans-serif;
-   background-color: lightgrey;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+    background: rgb(226, 226, 226);
 }
 
-header {
-    border-bottom: 2px solid black;
+p.site-title {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.clear {
+    clear: both;
 }
 
 img {
-    float: right;
     border: 5px solid black;
-    padding: 0.5em;
     background-color: white;
+    padding: 7px;
+}
+
+.firstImage {
+    float: right;
+    margin-left: 10px;
+}
+
+.secondImage {
+    float: left;
+    margin-right: 10px;
+}
+
+.quoteRight {
+    float: right;
+    width: 650px;
+}
+
+author {
+    display: block;
+    font-style: italic;
+    padding-left: 550px;
+}
+
+blockquote {
+    border-left: 2px solid gray;
+    padding-left: 25px;
+}
+
+hr {
+    border: 1px solid black;
 }
