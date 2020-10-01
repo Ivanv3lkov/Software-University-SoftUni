@@ -1,9 +1,10 @@
-  html {
+html {
     font-family: Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 5% 14%;
     font-size: 16px;
     line-height: 1.5;
+    padding: 2% 10%;
 }
 
 *,
@@ -16,36 +17,27 @@ body {
     background: rgb(238, 238, 238);
 }
 
-nav,
-h1 {
-    display: inline-block;
-}
-
 .site-title {
+    display: inline-block;
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
     padding-bottom: 0px;
-    margin-top: -40px;
-    margin-bottom: 10px;
 }
 
 hr {
     border: 1px solid;
 }
 
-h2,
-blockquote {
-    font-family: Georgia, serif;
-}
 
 h2 {
-    font-size: xx-large;
+    font-family: Georgia, serif;
     font-weight: 500;
-    margin-bottom: 10px;
+
 }
 
 blockquote {
+    font-family: Georgia, serif;
     margin: 0;
     padding: 0;
     float: right;
@@ -54,7 +46,7 @@ blockquote {
     padding-left: 30px;
 }
 
-blockquote>p:first-child {
+blockquote > p:first-child {
     margin: 0;
     padding: 0;
     width: 400px;
