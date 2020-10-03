@@ -42,7 +42,7 @@ blockquote {
     float: right;
     font-style: italic;
     border-left: 3px solid rgb(175, 175, 175);
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 blockquote > p:first-child {
