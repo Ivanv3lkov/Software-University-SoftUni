@@ -12,6 +12,14 @@ html {
     box-sizing: inherit;
 }
 
+.site-title {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+}
+
 hr {
     border: 1px solid;
 }
