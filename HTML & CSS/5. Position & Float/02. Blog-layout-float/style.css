@@ -32,8 +32,8 @@ img {
 }
 
 .firstImage {
-    margin-left: 20px;
     float: right;
+    margin-left: 20px;
 }
 
 blockquote {
@@ -53,8 +53,8 @@ blockquote > p {
 }
 
 .secondImage {
-    margin-right: 20px;
     float: left;
+    margin-right: 20px;
 }
 
 aside {
