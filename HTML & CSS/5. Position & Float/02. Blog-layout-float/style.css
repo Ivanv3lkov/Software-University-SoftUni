@@ -3,7 +3,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     line-height: 1.5;
-    padding: 0 5%;
+    padding: 1% 14%;
 }
 
 *,
@@ -12,47 +12,78 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    background: rgb(238, 238, 238);
+}
+
 .site-title {
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    padding-bottom: 0px;
+    margin-bottom: 0.4em;
 }
 
 hr {
     border: 1px solid;
 }
 
-body {
-    background-color: rgb(238, 238, 238);
-}
-
-img {
-    padding: 0.5em;
-    border: 2px solid black;
-    background-color: rgb(255, 255, 255);
-    box-shadow:rgba(0, 0, 0, 0.25);
-}
-
-blockquote {
-    font-family: Georgia, serif;
-}
-
 h1, h2, h3 {
     font-family: Georgia, serif;
     font-size: 1em;
     line-height: 1.2;
+    
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-style: italic;
+    border-left: 3px solid rgb(175, 175, 175);
+    padding-left: 15px;
+}
+
+blockquote > p:first-child {
+    margin: 0;
+    padding: 0;
+    width: 450px;
+    height: 130px;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25);
 }
 
 .firstImage {
     float: right;
-}   
-
+    border: 3px solid black;
+    padding: 8px;
+    width: 200px;
+    height: auto;
+}
 
 .secondImage {
     float: left;
+    border: 3px solid black;
+    padding: 8px;
+    margin: 0 20px 15px 0;
 }
+
+.author {
+    text-align: right;
+}
+
+p:nth-last-child(2) {
+    margin: 0;
+}
+
+p.last-p {
+    width: 890px;
+}
+
 
 
 
