@@ -48,10 +48,14 @@ h1, h2, h3 {
 .firstImage {
     float: right;
 }   
-/* 
-secondImage {
 
-} */
+
+.secondImage {
+    float: left;
+}
+
+
+
 
 
 
