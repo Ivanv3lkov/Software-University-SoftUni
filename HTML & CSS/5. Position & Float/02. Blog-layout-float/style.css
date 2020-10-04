@@ -2,7 +2,7 @@ body {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 2% 15%;
+    margin: 2% 13%;
     background-color: rgb(238, 238, 238);
 }
 
@@ -16,7 +16,7 @@ body {
 
 header, main {
     position: relative;
-    width: 70%;
+    width: 80%;
 }
 
 hr {
@@ -60,7 +60,7 @@ blockquote > p {
 aside {
     position: absolute;
     top: 125px;
-    right: 300px;
+    right: 170px;
 }
 
 h1, h2, h3 {
