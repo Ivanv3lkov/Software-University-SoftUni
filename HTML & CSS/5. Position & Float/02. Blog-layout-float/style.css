@@ -1,89 +1,71 @@
-html {
+body {
     font-family: Helvetica, sans-serif;
-    box-sizing: border-box;
     font-size: 16px;
     line-height: 1.5;
-    padding: 1% 14%;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-body {
-    background: rgb(238, 238, 238);
+    margin: 2% 15%;
+    background-color: rgb(238, 238, 238);
 }
 
 .site-title {
     display: inline-block;
-    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 0.4em;
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+header, main {
+    position: relative;
+    width: 70%;
 }
 
 hr {
-    border: 1px solid;
+    border: 1px solid black;
 }
 
-h1, h2, h3 {
-    font-family: Georgia, serif;
-    font-size: 1em;
-    line-height: 1.2;
-    
+img {
+    padding: 5px;
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0px 25px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.firstImage {
+    margin-left: 20px;
+    float: right;
 }
 
 blockquote {
     font-family: Georgia, serif;
-    margin: 0;
-    padding: 0;
+    border-left: 2px solid grey;
     float: right;
+    position: relative;
+    width: 50%;
+    color:rgb(94, 94, 94);
     font-style: italic;
-    border-left: 3px solid rgb(175, 175, 175);
-    padding-left: 15px;
+    padding-left: 20px;
+    margin: 0 0 0 10px;
 }
 
-blockquote > p:first-child {
-    margin: 0;
-    padding: 0;
-    width: 450px;
-    height: 130px;
-}
-
-img {
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.25);
-}
-
-.firstImage {
+blockquote > p {
     float: right;
-    border: 3px solid black;
-    padding: 8px;
-    width: 200px;
-    height: auto;
 }
 
 .secondImage {
+    margin-right: 20px;
     float: left;
-    border: 3px solid black;
-    padding: 8px;
-    margin: 0 20px 15px 0;
 }
 
-.author {
-    text-align: right;
+aside {
+    position: absolute;
+    top: 125px;
+    right: 300px;
 }
 
-p:nth-last-child(2) {
-    margin: 0;
+h1, h2, h3 {
+    font-family: Georgia, serif;
 }
-
-p.last-p {
-    width: 890px;
-}
-
 
 
 
