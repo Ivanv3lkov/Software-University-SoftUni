@@ -35,3 +35,24 @@ img {
     box-shadow:rgba(0, 0, 0, 0.25);
 }
 
+blockquote {
+    font-family: Georgia, serif;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+.firstImage {
+    float: right;
+}   
+/* 
+secondImage {
+
+} */
+
+
+
+
