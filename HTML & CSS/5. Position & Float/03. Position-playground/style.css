@@ -17,7 +17,6 @@ body {
 .viewport {
     position: relative;
     height: 1000px;
-
 }
 
 .viewport:nth-child(1) {
