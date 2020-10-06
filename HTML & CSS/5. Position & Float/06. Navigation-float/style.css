@@ -1,0 +1,88 @@
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+    margin: 2% 15%;
+    background-color: rgb(238, 238, 238);
+}
+
+nav a {
+    color: green;
+    text-decoration: none;
+}
+
+header nav {
+    float: right;
+}
+
+header nav, header nav li, header .title {
+    display: inline-block;
+}
+
+header nav li {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+header .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+header, main {
+    position: relative;
+}
+
+main {
+    width: 70%;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+img {
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+main > article:nth-child(1) > img {
+    margin-left: 20px;
+    float: right;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    border-left: 2px solid grey;
+    float: right;
+    position: relative;
+    width: 50%;
+    color:rgb(94, 94, 94);
+    font-style: italic;
+    padding-left: 20px;
+    margin: 0 0 0 10px;
+}
+
+blockquote > p {
+    float: right;
+}
+
+main > article:nth-child(3) > img {
+    margin-right: 20px;
+    float: left;
+}
+
+aside {
+    position: absolute;
+    top: 125px;
+    right: 300px;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
