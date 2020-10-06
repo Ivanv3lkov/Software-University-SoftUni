@@ -1,0 +1,85 @@
+html {
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 1% 14%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: rgb(238, 238, 238);
+}
+
+.site-title {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+}
+
+hr {
+    border: 1px solid;
+}
+
+main h1, main h2 {
+    font-family: Georgia, serif;
+    font-weight: 500;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    border-left: 2px solid grey;
+    float: right;
+    position: relative;
+    width: 50%;
+    color:rgb(94, 94, 94);
+    font-style: italic;
+    padding-left: 20px;
+    margin: 0 0 0 10px;
+}
+
+blockquote > p:first-child {
+    margin: 0;
+    padding: 0;
+    width: 450px;
+    height: 130px;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.firstImg {
+    float: right;
+    border: 3px solid black;
+    padding: 8px;
+    width: 200px;
+    height: auto;
+}
+
+.secondImg {
+    float: left;
+    border: 3px solid black;
+    padding: 8px;
+    margin: 0 20px 15px 0;
+}
+
+.author {
+    text-align: right;
+}
+
+p:nth-last-child(2) {
+    margin: 0;
+}
+
+p.last-p {
+    width: 890px;
+}
