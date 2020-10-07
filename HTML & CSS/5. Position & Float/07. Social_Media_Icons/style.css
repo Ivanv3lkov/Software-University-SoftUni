@@ -1,0 +1,51 @@
+@import url("css/all.css");
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+ul {
+    display: inline-block;
+    position: absolute;
+    padding: 2rem;
+}
+
+li {
+    position: relative;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgb(238,238,238);
+    list-style: none;
+}
+
+i {
+    color: black;
+    font-size: 1.5rem;
+}
+
+li:nth-child(1) :hover{
+    color: rgb(66, 103, 178);
+}
+
+li:nth-child(2) :hover{
+    color: rgb(29, 161, 242);
+}
+
+li:nth-child(3) :hover{
+    color: rgb(220, 63, 30);
+}
+
+li:nth-child(4) :hover{
+    color: rgb(0, 119, 181);
+}
+
+li:nth-child(5) :hover{
+    color: rgb(26, 127, 192);
+}
