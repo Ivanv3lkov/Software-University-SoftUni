@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    flex: 0 1 25%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(0, 153, 0);
+}
