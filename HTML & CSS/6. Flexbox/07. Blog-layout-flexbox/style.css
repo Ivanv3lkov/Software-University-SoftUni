@@ -8,6 +8,16 @@
     box-sizing: inherit;
 }
 
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 header {
     border-bottom: 2px solid rgb(0, 0, 0);
     width: 90%;
@@ -28,5 +38,21 @@ main h2 {
     font-family: Georgia, serif;
     font-weight: 500;
 }
+
+img {
+    padding: 0.5em;
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+article {
+    width: 70%;
+}
+
+.firstImage {
+    float: right;
+}
+
+
 
 
