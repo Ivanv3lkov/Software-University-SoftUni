@@ -10,13 +10,16 @@
 
 body {
     background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .page {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 70%;
+    width: 78%;
 }
 
 header {
@@ -27,18 +30,17 @@ header {
 header h1 {
     font-family: Helvetica, sans-serif;
     text-transform: uppercase;
-    
 }
 
 main {
-    width: 75%;
+    width: 70%;
     margin: 0;
 }
 
 main h2 {
     font-family: Georgia, serif;
     font-weight: 500;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 img {
@@ -53,9 +55,9 @@ img {
     float: right;
     border: 3px solid black;
     padding: 8px;
-    width: 200px;
+    width: 145px;
     height: auto;
-    margin: 0 2em;
+    margin: 0 1.5em 1em 0.8em;
 }
 
 .secondImage {
@@ -65,6 +67,23 @@ img {
 blockquote {
     font-family: Georgia, serif;
 }
+
+aside nav ul li a{
+    text-decoration: none;
+    color: rgb(5, 206, 5);
+}
+
+aside {
+    padding-left: 3.5em;
+}
+
+.paragraphAndblockquote {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 
 
 
