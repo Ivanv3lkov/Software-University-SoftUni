@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 15px 3px grey;
+    width: 20%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 220px;
+}
+
+div.card > h3 {
+    margin: 0;
+}
+
+div.card > p {
+    margin-top: 5px;
+}
