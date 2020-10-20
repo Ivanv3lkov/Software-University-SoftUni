@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(238, 238, 238);
+    display: flex;
+}
+
+.container {
+    max-width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: relative;
+    top: 110px;
+}
+
+figure {
+    width: 150px;
+    overflow:hidden;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px #bcbcbc;
+    align-items: stretch;
+}
+
+img {
+    display: block;
+    margin:0 -139.885%;
+    height: 100%;
+}
+
+img.full {
+    width: 100%;
+    margin: 0;
+}
+
+figure.container-full {
+    width: 600px;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+}
