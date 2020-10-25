@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.page {
+    display: flex;
+    flex-flow: column wrap;
+    width: 85%;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.row .paragraph-wrapper {
+    flex: 0 1 70%;
+    margin-right: 20px;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    display: block;
+    padding: 10px;
+    box-shadow: 0 0 17px 10px #ccc;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+}
+
+aside a {
+    color: rgb(0, 153, 0);
+    text-decoration: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+}
+
+main article img {
+    max-height: 270px;
+}
+
+.row blockquote,
+.row p {
+    flex: 1;
+}
+
+main article .row img {
+    float: 0 1 200px;
+}
+
+main article .row p {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.main-and-aside main {
+    float: 0 1 80%;
+}
+
+.main-and-aside aside {
+    float: 0 1 auto;
+}

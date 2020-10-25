@@ -1,4 +1,4 @@
-* {
+html {
     box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 78%;
+    width: 90%;
 }
 
 header {
@@ -33,7 +33,7 @@ header h1 {
 }
 
 main {
-    width: 70%;
+    width: 75%;
     margin: 0;
 }
 
@@ -68,6 +68,22 @@ blockquote {
     font-family: Georgia, serif;
 }
 
+blockquote {
+    font-family: Georgia, serif;
+    border-left: 2px solid grey;
+    float: right;
+    position: relative;
+    width: 50%;
+    color:rgb(94, 94, 94);
+    font-style: italic;
+    padding-left: 20px;
+    margin: 0 0 0 10px;
+}
+
+blockquote > p {
+    float: right;
+}
+
 aside nav ul li a{
     text-decoration: none;
     color: rgb(5, 206, 5);
@@ -76,14 +92,6 @@ aside nav ul li a{
 aside {
     padding-left: 3.5em;
 }
-
-.paragraphAndblockquote {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
 
 
 
