@@ -1,0 +1,47 @@
+html {
+    font-family: Helvetica, sans-serif;
+    margin: 50px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body {
+    background: rgb(238, 238, 238);
+}
+
+h3 {
+    font-family: Georgia, serif;
+    font-size: 1em/1.2;
+   padding: 0 0 0.5em 0;
+}
+
+section.card {
+    background: rgb(255, 255, 255);
+    width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 13px 3px #acacac;
+}
+
+.card .info-container {
+    padding: 20px 25px 50px 25px;
+}
+
+section div.info-container a {
+    background: rgb(0, 153, 0);
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    float: right;
+}
