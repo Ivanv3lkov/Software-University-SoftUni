@@ -1,0 +1,52 @@
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border-radius: 5px;
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+legend {
+    border: #aaa solid 1px;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+form {
+    padding: 1rem;
+}
+
+form > fieldset > div {
+    border: #aaa solid 1px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    outline: green;
+}
+
+form > fieldset > label {
+    display: block;
+}
+
+form > fieldset > div > i {
+    text-align: center;
+    width: 2rem;
+    padding: 0.5rem 0.5rem;
+}
+
+form > fieldset > div > input {
+    border-radius: 5px;
+    border: none;
+    width: 16rem;
+    outline: none;
+}
