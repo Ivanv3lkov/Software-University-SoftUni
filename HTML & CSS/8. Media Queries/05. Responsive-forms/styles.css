@@ -63,7 +63,7 @@ form input[type='email'],
 form input[type='password'] {
     display: block;
     width: 100%;
-    outline: none; /*remove default tab field marker*/
+    outline: none; 
 }
 
 form input[type="email"],
@@ -75,7 +75,7 @@ form input[type="text"] {
 }
 
 form input[type="email"]:hover,
-form input[type="email"]:focus, /*when we press TAB we know were we are*/
+form input[type="email"]:focus, 
 form input[type="password"]:hover,
 form input[type="password"]:focus,
 form input[type="text"]:hover,
