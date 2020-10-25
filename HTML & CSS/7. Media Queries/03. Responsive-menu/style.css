@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    width: 90%;
+    margin: 50px auto;
+    background-color: rgb(212, 212, 212);
+}
+
+header {
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    background-color: white;
+    border-radius: 5px;
+    flex: 0 1 20%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 2px;
+}
+
+header nav ul li {
+    background-color: rgb(61, 61, 61);
+    padding: 7px 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+}
+
+/* phone */
+@media only screen and (max-width: 500px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        margin-bottom: 5px;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    header h1::after {
+        content: "X Menu";
+        display: block;
+        text-transform: none;
+        padding-top: 20px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    header nav {
+        border-top: 2px solid black;
+        align-self: stretch;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        margin-bottom: 5px;
+        align-self: stretch;
+    }
+
+    header h1::after {
+        content: "X Menu";
+        display: block;
+        text-transform: none;
+        padding-top: 20px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    header nav {
+        border-top: 2px solid black;
+        align-self: stretch;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+}
+
+/* laptop */
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+    header nav ul li a {
+        font-size: 20px;
+    }
+}
