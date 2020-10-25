@@ -1,0 +1,114 @@
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font: 14px/1.5 Verdana, sans-serif;
+}
+
+body, form ,select, input, textarea, option {
+    font: inherit;
+}
+
+body {
+    padding: 2rem;
+}
+
+form {
+    max-width: 30rem;
+    margin: 4rem auto;
+    position: relative;
+}
+
+form fieldset {
+    display: block;
+    border: 1px solid #999;
+    padding: 2rem;
+    border-radius: 0.3rem;
+    background: rgb(238,238,238);
+}
+
+form fieldset p {
+    padding-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+form legend {
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 0.5rem;
+    border: 1px solid #999;
+    border-radius: 0.3rem;
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    background: rgb(238,238,238);
+    padding: 0.5rem 6rem 0.5rem 0.5rem;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    padding-right: 1rem;
+    min-width: 6rem;
+}
+
+form input[type='email'],
+form input[type='password'] {
+    display: block;
+    width: 100%;
+    outline: none; /*remove default tab field marker*/
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+    padding: 0.5rem 1rem;
+    border: 1px solid #999;
+    border-radius: 0.3rem;
+}
+
+form input[type="email"]:hover,
+form input[type="email"]:focus, /*when we press TAB we know were we are*/
+form input[type="password"]:hover,
+form input[type="password"]:focus,
+form input[type="text"]:hover,
+form input[type="text"]:focus {
+    border-color: #369;
+}
+
+form input[type="submit"] {
+    padding: 0.5rem 1.2rem;
+    background: #000;
+    border: none;
+    color: #FFF;
+    border-radius: 0.3em;
+    cursor: pointer;    
+}
+
+form input[type="submit"]:hover, 
+form input[type="submit"]:focus {
+    background: #FFF;
+    color: #369;
+}
+
+.icons{
+    position: relative;
+}
+
+.icon-user {
+    position:absolute;
+    left:7rem;
+    top:0.5rem;
+}
+
+.icons span:hover,
+.icons span:focus {
+    color: #369;
+}
