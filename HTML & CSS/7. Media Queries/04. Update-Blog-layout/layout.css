@@ -17,71 +17,113 @@ body {
 
 .page {
     display: flex;
-    flex-flow: column wrap;
-    width: 85%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
 }
 
-.row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+header {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    width: 100%;
 }
 
-.row .paragraph-wrapper {
-    flex: 0 1 70%;
-    margin-right: 20px;
+header h1 {
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+main {
+    width: 75%;
+    margin: 0;
+}
+
+main h2 {
+    font-family: Georgia, serif;
+    font-weight: 500;
+    margin-top: 1em;
 }
 
 img {
-    background-color: rgb(255, 255, 255);
+    padding: 0.5em;
     border: 2px solid black;
-    display: block;
-    padding: 10px;
-    box-shadow: 0 0 17px 10px #ccc;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25);
+   
+}
+
+.firstImage {
+    float: right;
+    border: 3px solid black;
+    padding: 8px;
+    width: 145px;
+    height: auto;
+    margin: 0 1.5em 1em 0.8em;
+}
+
+.secondImage {
+    float: left;
 }
 
 blockquote {
     font-family: Georgia, serif;
 }
 
-aside a {
-    color: rgb(0, 153, 0);
-    text-decoration: none;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
+blockquote {
     font-family: Georgia, serif;
+    border-left: 2px solid grey;
+    float: right;
+    position: relative;
+    width: 50%;
+    color:rgb(94, 94, 94);
+    font-style: italic;
+    padding-left: 20px;
+    margin: 0 0 0 10px;
 }
 
-header h1 {
-    text-transform: uppercase;
-    font-family: Helvetica, sans-serif;
+blockquote > p {
+    float: right;
 }
 
-main article img {
-    max-height: 270px;
+aside nav ul li a{
+    text-decoration: none;
+    color: rgb(5, 206, 5);
 }
 
-.row blockquote,
-.row p {
-    flex: 1;
+aside {
+    padding-left: 3.5em;
 }
 
-main article .row img {
-    float: 0 1 200px;
+header {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-main article .row p {
-    flex: 1;
-    margin-left: 20px;
+header nav {
+    background-color: white;
+    border-radius: 5px;
+    flex: 0 1 20%;
 }
 
-.main-and-aside main {
-    float: 0 1 80%;
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 2px;
 }
 
-.main-and-aside aside {
-    float: 0 1 auto;
+header nav ul li {
+    background-color: rgb(61, 61, 61);
+    padding: 7px 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
 }
