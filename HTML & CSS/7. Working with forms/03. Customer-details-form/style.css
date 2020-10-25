@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family:  Montserrat, sans-serif;
+    line-height: 1.2;
+    color: #333;
+}
+
+form {
+    width: 30rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    background-color: rgb(173, 216, 230);
+    border-radius: 5px;
+}
+
+form > div {
+    width: 28rem;
+    display: flex;
+}
+
+form > div {
+    margin-bottom: 1rem;
+}
+
+form > h2 {
+    padding: 2rem;
+    text-align: center;
+}
+
+form > div > label {
+    width: 6rem;
+}
+
+form > div > input[type=submit] {
+    margin: 0 auto;
+    color: white;
+    background-color: #02f;
+    padding: 1rem;
+    border-radius: 5px;
+    border:none;
+}
+
+form > div > input[type=radio], input[type=checkbox] {
+    margin: 0 0.5rem;
+}
+
+form > div > input[type=text], input[type=email], select, input[type=number], textarea {
+    width: 15rem;
+    padding: 0.4rem;
+}
