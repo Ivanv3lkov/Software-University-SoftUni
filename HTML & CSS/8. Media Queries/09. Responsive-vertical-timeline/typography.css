@@ -79,33 +79,3 @@
 .timeline > article:nth-child(odd) .timeline-panel h3 {
     text-align: right;
 }
-
-/* important*/
-
-/* div::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-} */
-
-/* 
-.timeline-panel {
-    width: 45%;
-    float: right;
-}
-.timeline > article:nth-child(odd) .timeline-panel {
-    float: left;
-}
-.timeline > article {
-    position: static;
-    top: 70px;
-    display: table;
-    margin: 50px;
-} */
