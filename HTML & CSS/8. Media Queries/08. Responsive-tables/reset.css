@@ -1,0 +1,31 @@
+@media all and (max-width: 500px) {
+    table {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    table thead tr th {
+        background: none;
+        color: black;
+    }
+
+    thead tr, tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    tbody {
+        flex: 1 0 auto;
+    }
+
+    tr.hidden {
+        display: flex;
+        opacity: 1;
+        background: white;
+    }
+
+    tbody tr {
+        width: 100%;
+    }
+}

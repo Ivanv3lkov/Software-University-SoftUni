@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+    width: 90%;
+    margin: 30px auto;
+}
+
+table {
+    border: 1px solid rgb(206, 206, 171);
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table thead th {
+    background: black;
+    color: beige;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tbody tr:nth-child(even) {
+    background: white;
+}
+
+
+.hidden {
+    display: none;
+    opacity: 0;
+}

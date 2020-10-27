@@ -1,0 +1,32 @@
+@media all and (max-width: 500px) {
+    .header-wrapper {
+        left: 15px;
+        font-size: 14px;
+    }
+    
+    .timeline::after {
+    left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }    
+
+    .left::after, .right::after {
+        left: 18px;
+    }
+
+    .right {
+        left: 0%;
+    }  
+
+    .left {
+        text-align: left;
+    }
+
+    .timeline > article:nth-child(odd) .timeline-panel h3 {
+        text-align: left;
+    }
+}
