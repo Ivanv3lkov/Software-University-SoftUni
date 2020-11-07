@@ -2,8 +2,8 @@ import { beginRequest, endRequest } from './controllers/notification.js';
 import API from './api.js';
 
 const endpoints = {
-    MOVIES: "data/movies2020",
-    MOVIE_BY_ID: "data/movies2020/"
+    MOVIES: "data/movies",
+    MOVIE_BY_ID: "data/movies/"
 };
 
 const api = new API(
