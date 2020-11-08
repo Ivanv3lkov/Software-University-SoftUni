@@ -114,5 +114,4 @@ export default class API {
         localStorage.removeItem('userId');
         return result;
     }
-
 }

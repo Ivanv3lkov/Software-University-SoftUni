@@ -4,7 +4,6 @@ import login, { loginPost } from './controllers/login.js';
 import catalog, { create, edit, details, createPost, buyTicket, myMovies, editPost, deleteMovie } from './controllers/movies.js';
 import logout from './controllers/logout.js';
 
-
 window.addEventListener('load', () => {
     const app = Sammy('#container', function () {
         this.use('Handlebars', 'hbs');
@@ -41,8 +40,6 @@ window.addEventListener('load', () => {
 
         this.get('#/buy/:id', buyTicket);
         this.get('#/delete/:id', deleteMovie);
-
-
     });
 
     app.run();
