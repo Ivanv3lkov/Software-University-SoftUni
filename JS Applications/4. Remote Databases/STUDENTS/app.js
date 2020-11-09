@@ -1,6 +1,7 @@
 import { FetchData, getUrl } from './data.js';
 import { map } from './dom.js';
 import { Methods } from './Functions/methods.js';
+
 (function () {
     const methods = new Methods();
     const elements = map();
