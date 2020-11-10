@@ -51,13 +51,11 @@ nav ul li a{
   font-weight: bold;
 }
 
-
 a:hover {
   color: white;
   outline: none;
   cursor: pointer;
 }
-
 
 nav ul li a:hover,
 button a {
