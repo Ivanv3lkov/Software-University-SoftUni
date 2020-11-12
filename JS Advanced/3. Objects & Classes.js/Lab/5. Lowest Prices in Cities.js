@@ -24,6 +24,7 @@ function solve(input) {
         console.log(`${key} -> ${lowest[1]} (${lowest[0]})`);
     }
 }
+
 solve(['Sample Town | Sample Product | 1000',
     'Sample Town | Orange | 2',
     'Sample Town | Peach | 1',
