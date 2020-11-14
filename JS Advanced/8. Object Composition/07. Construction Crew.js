@@ -7,12 +7,9 @@ function solve(worker) {
     return worker;
 }
 
-
 console.log(solve({
     weight: 120,
     experience: 20,
     levelOfHydrated: 200,
     dizziness: true
 }));
-
-

@@ -22,7 +22,3 @@ myInstance.extend({
 
 console.log('intance props: ', myInstance);
 console.log('prototype proprs ', Object.getPrototypeOf(myInstance));
-
-
-
-
