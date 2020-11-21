@@ -9,7 +9,7 @@ function solve() {
 
     const form = document.getElementById('container');
     const [nameInput, hallInput, ticketPriceInput, onScreenButton] = Array.from(form.children);
-    const moviesOnScreenContainer = document.querySelector('#movies > ul');
+    const moviesOnScreen = document.querySelector('#movies > ul');
     const moivesInArchive = document.querySelector('#archive > ul');
     const clearButton = document.querySelector('#archive > button');
 
@@ -45,7 +45,7 @@ function solve() {
         div.appendChild(archiveButton);
 
         li.appendChild(div);
-        moviesOnScreenContainer.appendChild(li);
+        moviesOnScreen.appendChild(li);
 
         nameInput.value = '';
         hallInput.value = '';
@@ -59,7 +59,7 @@ function solve() {
             if (isNaN(Number(ticketsSoldInput)) || ticketsSoldInput.trim() === '') {
                 return;
             }
-            moviesOnScreenContainer.removeChild(li);
+            moviesOnScreen.removeChild(li);
             const totalAmountOfSoldTickets = Number(ticketsSoldInput) * ticketPrice;
             
             li.removeChild(div);
@@ -71,13 +71,11 @@ function solve() {
 
             moivesInArchive.appendChild(li);
 
+            clearButton.addEventListener('click', deleteArchive )
+
             function deleteArchive() {
                 moivesInArchive.removeChild(li);
             }
-
-            clearButton.addEventListener('click', function() {
-                moivesInArchive.removeChild(li);
-            })
         } 
     }
 }
