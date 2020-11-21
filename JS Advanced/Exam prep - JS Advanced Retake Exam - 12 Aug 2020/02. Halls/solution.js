@@ -94,8 +94,3 @@ console.log(concert.hallEvent('The Chromatica Ball', ['LADY GAGA']));
 console.log(concert.toString());
 console.log(concert.close());
 console.log(concert.toString());
-
-
-
-
-
