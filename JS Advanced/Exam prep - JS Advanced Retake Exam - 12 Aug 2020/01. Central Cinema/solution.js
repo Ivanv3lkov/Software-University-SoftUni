@@ -54,7 +54,7 @@ function solve() {
         archiveButton.addEventListener('click', archiveFunc);
 
         function archiveFunc() {
-            const ticketsSoldInput = div.children[1].value;
+            const ticketsSoldInput = div.children[1].value
 
             if (isNaN(Number(ticketsSoldInput)) || ticketsSoldInput.trim() === '') {
                 return;
