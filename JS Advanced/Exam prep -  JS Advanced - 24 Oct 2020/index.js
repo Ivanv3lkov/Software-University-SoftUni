@@ -21,7 +21,6 @@ function solve() {
     const selectModule = document.querySelector('div .form-control > select');
     const addButton = document.querySelector('.form-control > button');
     const trainingsSection = document.querySelector('section.user-view.section-view > div');
- 
 
     addButton.addEventListener('click', addNewLecture);
 
@@ -54,12 +53,34 @@ function solve() {
         li.appendChild(deleteButton);
 
         ul.appendChild(li);
-        div.appendChild(ul);
-
-        trainingsSection.appendChild(div);
-
+       
+        let allLectures = Array.from(trainingsSection.querySelectorAll('div > h3'));
         
+        if (allLectures.length === 0) {
+            div.appendChild(ul);
+            trainingsSection.appendChild(div);
+        }
+
+
+        for (let lecture of allLectures) {
+            if (lecture.textContent === selectedModule) {
+                lecture.parentNode.appendChild(ul);
+            } else {
+                div.appendChild(ul);
+                trainingsSection.appendChild(div);
+            }
+        }
+
+        deleteButton.addEventListener('click', deleteLecture);
+       
+        function deleteLecture(e) {
+            const currentModule = e.target.parentNode.parentNode.parentNode.children;
+            
+            if (Array.from(currentModule).length === 2) {
+                e.target.parentNode.parentNode.parentNode.remove();
+                return;
+            }
+            e.target.parentNode.parentNode.remove();
+        }
     }
-
 }
-
