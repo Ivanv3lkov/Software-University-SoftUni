@@ -14,7 +14,19 @@ function solve() {
         }
 
         dateValue = dateValue.replace('T', ' - ');
+        
         return dateValue;
+    }
+
+    function convertToDateAgain(string) {
+        let splittedString = string.split(' - ');
+        let dateValue = splittedString[1] + 'T' + splittedString[2];
+
+        while (dateValue.includes('/')) {
+            dateValue = dateValue.replace('/', '-');
+        }
+        
+        return dateValue;;
     }
 
     const [lectureInput, dateInput] = document.querySelectorAll('div .form-control > input');
@@ -27,11 +39,12 @@ function solve() {
     function addNewLecture(e) {
         e.preventDefault();
 
-        if (lectureInput.value === '' || dateInput.value === '' || selectModule.value === 'Select module') {
+        if (lectureInput.value.trim() === '' || dateInput.value.trim() === '' || selectModule.value === 'Select module') {
             return;
         }
-
+        
         const selectedModule = selectModule.value.toUpperCase() + '-MODULE';
+        
         const selectedDate = `${lectureInput.value} - ${convertDate(dateInput.value)}`;
 
         const div = makeElement('div');
@@ -51,36 +64,43 @@ function solve() {
         const deleteButton = makeElement('buton', 'Del');
         deleteButton.setAttribute('class', 'red');
         li.appendChild(deleteButton);
+        deleteButton.addEventListener('click', deleteLecture);
 
         ul.appendChild(li);
-       
-        let allLectures = Array.from(trainingsSection.querySelectorAll('div > h3'));
-        
-        if (allLectures.length === 0) {
+
+        let allModules = Array.from(trainingsSection.querySelectorAll('div'));
+
+        allModules.sort((a, b) => {  
+            let aDate = new Date(convertToDateAgain(a.querySelector('h4').textContent));
+            let bDate = new Date(convertToDateAgain(b.querySelector('h4').textContent));
+                      
+            return aDate.localeCompare(bDate);
+           
+        })
+        if (allModules.length === 0) {
             div.appendChild(ul);
             trainingsSection.appendChild(div);
-        }
-
-
-        for (let lecture of allLectures) {
-            if (lecture.textContent === selectedModule) {
-                lecture.parentNode.appendChild(ul);
+        } else {
+            let isModuleExist = allModules.find(m => m.querySelector('h3').textContent === selectedModule);
+            
+            if (isModuleExist) {
+                isModuleExist.querySelector('ul').appendChild(li);
             } else {
                 div.appendChild(ul);
                 trainingsSection.appendChild(div);
             }
         }
+        
+    }
 
-        deleteButton.addEventListener('click', deleteLecture);
-       
-        function deleteLecture(e) {
-            const currentModule = e.target.parentNode.parentNode.parentNode.children;
-            
-            if (Array.from(currentModule).length === 2) {
-                e.target.parentNode.parentNode.parentNode.remove();
-                return;
-            }
-            e.target.parentNode.parentNode.remove();
+    function deleteLecture(e) {
+        const lecturesCurrentModule = e.target.parentNode.parentNode.children;
+        const currentModule = e.target.parentNode.parentNode.parentNode;
+
+        if (lecturesCurrentModule.length === 1) {
+            currentModule.remove();
+        } else {
+            e.target.parentNode.remove();
         }
     }
 }
