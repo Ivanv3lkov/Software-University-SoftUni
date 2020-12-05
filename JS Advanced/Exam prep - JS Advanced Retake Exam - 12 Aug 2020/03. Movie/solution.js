@@ -48,7 +48,7 @@ class Movie {
         ];
 
         if (this.screenings.length > 0) {
-            const sortedMovies = Object.values(this.screenings).sort((a, b) => a.hall.localeCompare(b.hall));
+            const sortedMovies = this.screenings.sort((a, b) => a.hall.localeCompare(b.hall));
             output.push('Remaining film screenings:');
             for (let screen of sortedMovies) {
                 output.push(`${screen.hall} - ${screen.date} - ${screen.description}`);
