@@ -69,14 +69,7 @@ function solve() {
         ul.appendChild(li);
 
         let allModules = Array.from(trainingsSection.querySelectorAll('div'));
-
-        allModules.sort((a, b) => {  
-            let aDate = new Date(convertToDateAgain(a.querySelector('h4').textContent));
-            let bDate = new Date(convertToDateAgain(b.querySelector('h4').textContent));
-                      
-            return aDate.localeCompare(bDate);
-           
-        })
+        
         if (allModules.length === 0) {
             div.appendChild(ul);
             trainingsSection.appendChild(div);
@@ -90,7 +83,6 @@ function solve() {
                 trainingsSection.appendChild(div);
             }
         }
-        
     }
 
     function deleteLecture(e) {
