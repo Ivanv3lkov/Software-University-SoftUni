@@ -14,7 +14,7 @@ function solve() {
         }
 
         dateValue = dateValue.replace('T', ' - ');
-        
+
         return dateValue;
     }
 
@@ -25,8 +25,7 @@ function solve() {
         while (dateValue.includes('/')) {
             dateValue = dateValue.replace('/', '-');
         }
-        
-        return dateValue;;
+        return new Date(dateValue);
     }
 
     const [lectureInput, dateInput] = document.querySelectorAll('div .form-control > input');
@@ -36,15 +35,17 @@ function solve() {
 
     addButton.addEventListener('click', addNewLecture);
 
+
+
     function addNewLecture(e) {
         e.preventDefault();
 
         if (lectureInput.value.trim() === '' || dateInput.value.trim() === '' || selectModule.value === 'Select module') {
             return;
         }
-        
+
         const selectedModule = selectModule.value.toUpperCase() + '-MODULE';
-        
+
         const selectedDate = `${lectureInput.value} - ${convertDate(dateInput.value)}`;
 
         const div = makeElement('div');
@@ -69,19 +70,36 @@ function solve() {
         ul.appendChild(li);
 
         let allModules = Array.from(trainingsSection.querySelectorAll('div'));
-        
+
         if (allModules.length === 0) {
             div.appendChild(ul);
             trainingsSection.appendChild(div);
         } else {
             let isModuleExist = allModules.find(m => m.querySelector('h3').textContent === selectedModule);
-            
+
             if (isModuleExist) {
                 isModuleExist.querySelector('ul').appendChild(li);
             } else {
+
                 div.appendChild(ul);
                 trainingsSection.appendChild(div);
             }
+        }
+        for (let module of allModules) {
+            let h4 = module.querySelectorAll('li > h4')
+            
+            
+            // Array.from(module.querySelectorAll('li > h4').textContent)
+            //     .sort((a, b) => {
+            //         let a1 = a.querySelector('h4').textContent;
+            //         let b1 = b.querySelector('h4').textContent;
+
+            //         let aDate = convertToDateAgain(a1);
+            //         let bDate = convertToDateAgain(b1);
+
+            //         return aDate - bDate;
+            //     })
+
         }
     }
 

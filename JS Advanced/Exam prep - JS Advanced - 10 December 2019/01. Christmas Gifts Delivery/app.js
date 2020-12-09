@@ -18,7 +18,7 @@ function solution() {
         li.className = 'gift';
         li.textContent = input.value;
 
-        const sendBtn = creteButton('sendButton', 'Send');
+        const sendBtn = createButton('sendButton', 'Send');
         sendBtn.addEventListener('click', function (e) {
             const li = document.createElement('li');
             li.textContent = e.target.parentElement.textContent.slice(0, e.target.parentElement.textContent.lastIndexOf('Send'));
@@ -29,7 +29,7 @@ function solution() {
             e.target.parentElement.remove();
         });
 
-        const discardBtn = creteButton('discardButton', 'Discard');
+        const discardBtn = createButton('discardButton', 'Discard');
         discardBtn.addEventListener('click', function (e) {
             const li = document.createElement('li');
             li.textContent = e.target.parentElement.textContent.slice(0, e.target.parentElement.textContent.lastIndexOf('Send'));
@@ -58,7 +58,7 @@ function solution() {
 
         input.value = '';
 
-        function creteButton(btnId, btnText) {
+        function createButton(btnId, btnText) {
             const button = document.createElement('button');
             button.id = btnId;
             button.textContent = btnText;
