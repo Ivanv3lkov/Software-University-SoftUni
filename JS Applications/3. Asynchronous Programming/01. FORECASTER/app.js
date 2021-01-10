@@ -19,7 +19,14 @@ window.addEventListener('load', () => {
 
     async function getForecast() {
         const locationName = input.value;
-        const code = await data.getCode(locationName);
+        let code = '';
+
+        try {
+            code = await data.getCode(locationName);
+        } catch (err) {
+            input.value = 'Error';
+            return;
+        }
 
         const todayP = data.getToday(code);
         const upcomingP = data.getUpcoming(code);
