@@ -5,4 +5,4 @@ function stringLength(...args) {
     console.log(avgLength);
 }
 
-stringLenght('chocolate', 'ice cream', 'cake')
+stringLength('chocolate', 'ice cream', 'cake')
