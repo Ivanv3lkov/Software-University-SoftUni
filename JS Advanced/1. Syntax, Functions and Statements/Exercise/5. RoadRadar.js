@@ -2,7 +2,7 @@ function solve(input) {
     let speed = input[0];
     let area = input[1];
 
-    limits = {
+    const limits = {
         motorway: 130,
         interstate: 90,
         city: 50,
