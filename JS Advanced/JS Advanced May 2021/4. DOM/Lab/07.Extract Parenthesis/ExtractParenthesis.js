@@ -1,5 +1,14 @@
 function extract(content) {
-    let target = document.getElementById(content);
-    let text = target.textContent;
-    
+    let text = document.querySelector(`#${content}`).textContent;
+    let pattern = /\(([^)]+)\)/g;
+    let result = [];
+    let match = pattern.exec(text);
+
+    while (match) {
+        console.log(match);
+        result.push(match[1])
+        match = pattern.exec(text);
+    }
+
+    return result.join('; ');
 }
