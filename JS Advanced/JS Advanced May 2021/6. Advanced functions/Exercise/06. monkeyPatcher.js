@@ -13,8 +13,7 @@ function solution(command) {
             let rating = 'new';
             if (totalVotes < 10) {
                 rating = 'new';
-            }
-            else if ((this.upvotes / totalVotes) > 0.66) {
+            } else if ((this.upvotes / totalVotes) > 0.66) {
                 rating = 'hot';
             } else if (this.downvotes <= this.upvotes && totalVotes > 100) {
                 rating = 'controversial';
