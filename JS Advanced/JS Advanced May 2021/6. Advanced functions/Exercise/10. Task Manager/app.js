@@ -37,12 +37,12 @@ function solve() {
         startButton.addEventListener('click', (e) => {
             let currentDiv = e.target.parentElement;
             e.target.textContent === 'Start' ? e.target.remove() : '';
-            let finshButton = createElement('button', 'Finish');
-            finshButton.setAttribute('class', 'orange');
-            currentDiv.appendChild(finshButton);
+            let finishButton = createElement('button', 'Finish');
+            finishButton.setAttribute('class', 'orange');
+            currentDiv.appendChild(finishButton);
             inProgressDiv.appendChild(currentDiv.parentElement);
 
-            finshButton.addEventListener('click', (e) => {
+            finishButton.addEventListener('click', (e) => {
                 let currentTask = e.target.parentElement.parentElement;
                 e.target.parentElement.remove();
                 completedDiv.appendChild(currentTask);
