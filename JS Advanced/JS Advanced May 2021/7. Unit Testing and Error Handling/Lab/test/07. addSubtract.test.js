@@ -42,3 +42,5 @@ describe('createCalculator() creates calculator object', () => {
         assert.isNaN(calculator.get())
     });
 });
+
+//npm test -- test/"07. addSubtract.test.js"
