@@ -19,8 +19,4 @@ let mathEnforcer = {
     }
 };
 
-module.exports = {
-    add: mathEnforcer.addFive,
-    subtractTen: mathEnforcer.subtractTen,
-    sum: mathEnforcer.sum,
- };
+module.exports = mathEnforcer;
