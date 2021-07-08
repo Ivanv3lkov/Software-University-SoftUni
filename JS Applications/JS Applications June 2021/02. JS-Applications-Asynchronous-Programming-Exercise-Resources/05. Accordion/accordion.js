@@ -1,8 +1,7 @@
 (function solution() {
     let mainSection = document.getElementById('main');
-    let url = 'http://localhost:3030/jsonstore/advanced/articles/list';
 
-    fetch(url)
+    fetch('http://localhost:3030/jsonstore/advanced/articles/list')
         .then(response => response.json())
         .then(data => {
             data.forEach(({ _id, title }) => {
