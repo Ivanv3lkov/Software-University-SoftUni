@@ -1,0 +1,132 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.container {
+    margin: 30px auto;
+}
+.notification {
+    color: red;
+    margin-top:0.5% ;
+    height: 10px;
+  }
+
+table{
+    border:1px solid #234465;
+    padding: 1%;
+    padding-bottom: 0;
+    margin: 0 auto;
+    min-width: 60%;
+    border-radius: 4px;
+}
+table th{
+    text-align: center;
+    background: #234465;
+    color:white;
+    
+}
+table tbody td{
+    text-align: center;
+    padding: 0.5%;
+}
+
+table tbody tr:nth-child(even){
+    background-color: rgba(139, 216, 139,0.5);
+    color: black;
+}
+
+table tbody tr:nth-child(odd){
+    color: black;
+    background-color: rgb(139, 216, 139);
+    border-bottom: 1px solid black;
+}
+
+table tbody tr button:first-child{
+    background: #40b872;
+    color:white;
+}
+table tbody tr button:first-child:hover{
+    color:black;
+}
+
+table tbody tr button:nth-child(2){
+    background: #cf7044;
+    color:white;
+}
+table tbody tr button:nth-child(2):hover{
+    color:black;
+}
+
+table tr td:not(:last-child):hover{
+    text-decoration: underline;
+}
+table tbody tr:hover {
+    background-color:white ;
+}
+
+table button{
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 8%;
+    border:1px solid white;
+}
+
+table button:hover{
+    text-decoration: underline;
+}
+table tfoot tr td{
+    border-top: 1px solid black;
+}
+
+button#loadBooks{
+    margin: 0 auto;
+    display:block;
+    padding:1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 4px;
+}
+
+
+label, input{
+    display:block;
+    margin: 10px auto;
+}
+
+form input[ type="text"]{
+    margin-top: 1%;
+    width: 25%;
+}
+
+form{
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form button ,input[type="button"]{
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 4px;
+    background-color: #234465;
+    color:white;
+    border: none;
+    padding: 0.5%;
+    display: inline-block;
+    outline: none;
+}
+
+#loadBooks {
+    cursor: pointer; 
+    background-color: #234465;;
+    color:white;
+}
+
+.editForm {
+    display: none;
+}
+button:hover,input[type="button"]:hover {
+    cursor: pointer;
+}

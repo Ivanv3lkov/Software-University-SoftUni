@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phonebook</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Phonebook</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="phonebook">
+                <!-- <tr>
+                    <td>Ivaylo</td>
+                    <td>+1-215-7343</td>
+                    <td>
+                        <button data-id="2d5ae327-87c7-45fa-acf9-f04aa4726173">Delete</button>
+                    </td>
+                </tr> -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><button id="btnLoad">Load</button></td>
+                </tr>
+            </tfoot>
+        </table>
+        <h2>Create Contact</h2>
+        <p class="notification"></p>
+        <section class="contact">
+            <label >Person: <input type="text" id="person"/></label>
+            <label >Phone: <input type="text" id="phone"/></label>
+        </section>
+        <button id="btnCreate">Create</button>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
