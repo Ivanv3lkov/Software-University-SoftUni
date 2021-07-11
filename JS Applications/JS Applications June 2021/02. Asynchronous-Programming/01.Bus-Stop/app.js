@@ -6,8 +6,11 @@ function getInfo() {
 
     stopIdInput.value = '';
     stopNameDiv.textContent = '';
-    busContainer.innerHTML = '';
-
+    // busContainer.innerHTML = '';
+    if (busContainer.children) {
+        Array.from(busContainer.children).forEach(li => li.remove());
+    }
+    
     fetch(busesUrl)
         .then(res => res.json())
         .then(data => {

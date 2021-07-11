@@ -4,8 +4,11 @@ async function lockedProfile() {
     const data = await response.json();
 
     const main = document.getElementById('main');
-    main.innerHTML = '';
-
+    //main.innerHTML = '';
+    if (main.children) {
+        Array.from(main.children).forEach(el => el.remove());
+    }
+  
     Object.values(data).forEach((user, i) => {
         i = i + 1;
 

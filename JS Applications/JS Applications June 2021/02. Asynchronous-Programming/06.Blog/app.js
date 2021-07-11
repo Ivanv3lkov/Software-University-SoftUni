@@ -8,7 +8,8 @@ function attachEvents() {
     let postId;
 
     buttonLoadPosts.addEventListener('click', () => {
-        select.innerHTML = '';
+        //select.innerHTML = '';
+        Array.from(select.children).forEach(el => el.remove());
         fetch(`${baseURL}/posts`)
             .then(res => res.json())
             .then(data => {
@@ -37,7 +38,8 @@ function attachEvents() {
                 fetch(`${baseURL}/comments`)
                     .then(res => res.json())
                     .then((data) => {
-                        postCommentsEl.innerHTML = '';
+                        //postCommentsEl.innerHTML = '';
+                        Array.from(postCommentsEl.children).forEach(el => el.remove());
                         Object.entries(data)
                             .forEach(([commentId, value]) => {
                                 if (value.postId == id) {
