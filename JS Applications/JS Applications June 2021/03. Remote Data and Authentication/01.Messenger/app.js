@@ -3,7 +3,7 @@ const sendButton = document.getElementById('submit');
 const refreshButton = document.getElementById('refresh');
 const textarea = document.getElementById('messages');
 
-sendButton.addEventListener('click', createMessage)
+sendButton.addEventListener('click', createMessage);
 refreshButton.addEventListener('click', getAllMessages);
 
 async function createMessage() {
