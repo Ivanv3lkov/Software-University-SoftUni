@@ -6,50 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Books</title>
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="src/app.js" type="module"></script>
 </head>
 <body>
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id='books'>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3"> <button id="loadBooks">LOAD ALL BOOKS</button></td>
-                </tr>
-            </tfoot>
-        </table>
-    
-        <form class="createForm">
-            <h3>CREATE FORM</h3>
-            <label>TITLE</label>
-            <input type="text" name="title" placeholder="Title...">
-            <label>AUTHOR</label>
-            <input type="text" name="author" placeholder="Author...">
-            <p class="notification"></p>
-            <button>Submit</button>
-        </form>
-        <form class="editForm">
-            <h3>EDIT FORM</h3>
-            <label>TITLE</label>
-            <input type="text" name="title" placeholder="Title...">
-            <label>AUTHOR</label>
-            <input type="text" name="author" placeholder="Author...">
-            <p class="notification"></p>
-            <button>Save</button>
-            <input id="cancelBtn" type="button" value="Cancel"/>
-        </form>
+<button id="loadBooks">LOAD ALL BOOKS</button>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
 
-    </div>
+<form id="submitForm">
+    <h3>FORM</h3>
+    <label>TITLE</label>
+    <input type="text" name="title" placeholder="Title...">
+    <label>AUTHOR</label>
+    <input type="text" name="author" placeholder="Author...">
+    <button>Submit</button>
+</form>
 
-    <script src="./app.js"></script>
+<form id="editForm">
+    <h3>Edit FORM</h3>
+    <label>TITLE</label>
+    <input type="text" name="title">
+    <label>AUTHOR</label>
+    <input type="text" name="author">
+    <button>Save</button>
+</form>
 </body>
 </html>
 
 <!--Feel free to change/update/modify the HTML Structure-->
+
+<!--yes, yes. added classes to buttons so we can attach only 1 event listener in JS,-->
+<!--not 520 762, moved script tag in head, added defer attribute
+added ID to submit form, added another form for the update, updated the name fields of the inputs
+added css in the file for initial displays of the forms-->

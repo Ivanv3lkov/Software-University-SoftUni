@@ -7,11 +7,6 @@ body{
     text-align: center;
     margin: 0 auto;
 }
-.notification {
-    color: red;
-    margin-top:0.5% ;
-    height: 10px;
-  }
 
 table{
     border:1px solid #234465;
@@ -21,15 +16,13 @@ table{
     border-radius: 4px;
 }
 table th{
+    text-decoration: underline;
     text-align: center;
-    border-bottom:1px solid black;
 }
 table tbody td{
-    text-align: center;
-    padding: 0.5%;
-}
-table tbody td:first-of-type {
     text-align: left;
+    border-bottom:1px solid black;
+    padding: 0.5%;
 }
 
 table tbody tr:nth-child(even){
@@ -70,7 +63,7 @@ button {
 }
 
 button:hover {
-    text-decoration: underline;
+    color: red;
     cursor: pointer;
 }
 
@@ -89,5 +82,4 @@ button:hover {
 }
 .inputs input {
     margin: 10px auto;
-    padding: 5px 15px;
 }
