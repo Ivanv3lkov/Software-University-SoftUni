@@ -1,7 +1,7 @@
 import { isAuthenticated } from './auth.js';
 
 let guestNavItems = document.getElementsByClassName('guest');
-let privatetNavItems = document.getElementsByClassName('private');
+let privateNavItems = document.getElementsByClassName('private');
 
 function updateNavigation() {
     if (isAuthenticated()) {
@@ -10,7 +10,7 @@ function updateNavigation() {
         }
 
         
-        for (const navItem of privatetNavItems) {
+        for (const navItem of privateNavItems) {
             navItem.classList.remove('hidden');
         }
     } else {
@@ -19,7 +19,7 @@ function updateNavigation() {
             navItem.classList.remove('hidden');
         }
 
-        for (const navItem of privatetNavItems) {
+        for (const navItem of privateNavItems) {
             navItem.classList.add('hidden');
         }
     }
