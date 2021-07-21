@@ -1,35 +1,38 @@
-import registerPage from './src/pages/register.js';
-import nav from './src/nav.js';
-import homePage from './src/pages/home.js';
-import loginPage from './src/pages/login.js';
-import addMoviePage from './src/pages/addMovie.js';
-import movieDetailsPage from './src/pages/movieDetails.js';
-import editMoviePage from './src/pages/editMovie.js';
-import viewFinder from './src/viewFinder.js';
-import auth from './src/services/authService.js';
+import { reqUrls, validateData, fetchData, clearData, domEL } from "./src/helpers.js";
+import { createPath, router, clickHandler } from "./src/router.js";
+import { home } from "./src/home.js";
+import { newMovie } from "./src/newMovie.js";
+import { login } from "./src/login.js";
+import { logout } from "./src/logout.js";
+import { register } from './src/register.js';
+import { details } from "./src/details.js";
+import { edit } from "./src/edit.js";
 
-let appElement = undefined;
-setupApp();
+window.addEventListener('popstate', function () {
+    router(location.href, true)
+})
 
-function setupApp() {
-    let appSelector = '#app';
-    //make sure we start with a clean localStorage
-    auth.cleanStorage();
-    appElement = document.querySelector(appSelector);
-    homePage.initialize(document.querySelector('#home-page'));
-    registerPage.initialize(document.querySelector('#form-sign-up'));
-    loginPage.initialize(document.querySelector('#form-login'));
-    addMoviePage.initialize(document.querySelector('#add-movie'));
-    movieDetailsPage.initialize(document.querySelector('#movie-example'), 'link');
-    editMoviePage.initialize(document.querySelector('#edit-movie'));
-    nav.initialize(document.querySelector('nav'));
-    viewFinder.initialize(document.querySelectorAll('.link'), '.link', changeView);
+window.addEventListener('load', function (e) {
+    router(location.href, true)
+    document.addEventListener('click', clickHandler)
+})
 
-    viewFinder.navigateTo('home');
-}
+createPath('/', home)
+createPath('/home', home)
+createPath('/newMovie', newMovie)
+createPath('/login', login)
+createPath('/logout', logout)
+createPath('/register', register)
+createPath('/details', details)
+createPath('/edit', edit)
 
-async function changeView(viewPromise) {
-    let view = await viewPromise;
-    [...appElement.children].forEach(el => el.remove());
-    appElement.appendChild(view);
-}
+
+
+
+
+
+
+
+
+
+
