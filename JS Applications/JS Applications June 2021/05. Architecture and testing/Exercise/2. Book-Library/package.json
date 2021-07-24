@@ -1,0 +1,19 @@
+{
+  "name": "book-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -p 3000 -a localhost",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "http-server": "^0.12.3",
+    "mocha": "^9.0.2",
+    "playwright-chromium": "^1.12.3"
+  }
+}
