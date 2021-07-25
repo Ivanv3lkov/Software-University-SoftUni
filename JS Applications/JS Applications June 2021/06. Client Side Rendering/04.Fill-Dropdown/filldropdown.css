@@ -47,3 +47,8 @@ input[type="submit"] {
     color: #8198A2;
     text-transform: uppercase;
 }
+
+input.error {
+    border: 1.5px solid red;
+  }
+
