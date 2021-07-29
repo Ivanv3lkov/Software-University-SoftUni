@@ -23,15 +23,12 @@ async function loadStudents() {
 
 function onClickHandler() {
    let searchInput = document.getElementById('searchField');
-   let searchText = searchInput.value.toLowerCase();
+   let searchText = searchInput.value.trim().toLowerCase();
 
    if (!searchText) {return;}
 
    let allStudents = students.map(student => Object.assign({}, student));
-   let matchedStudents = allStudents
-      .filter(student => Object.values(student).some(val => {
-         return val.toLowerCase().includes(searchText)
-      }));
+   let matchedStudents = allStudents.filter(student => Object.values(student).some(val => val.toLowerCase().includes(searchText)));
    matchedStudents.forEach(s => s.class = 'select');
 
    searchInput.value = '';
