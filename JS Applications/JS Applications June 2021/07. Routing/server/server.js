@@ -485,6 +485,21 @@
                 return context.storage.get();
             }
 
+            if (query.distinct) {
+                const props = query.distinct.split(',').filter(p => p != '');
+                responseData = Object.values(responseData.reduce((distinct, c) => {
+                    const key = props.map(p => c[p]).join('::');
+                    if (distinct.hasOwnProperty(key) == false) {
+                        distinct[key] = c;
+                    }
+                    return distinct;
+                }, {}));
+            }
+
+            if (query.count) {
+                return responseData.length;
+            }
+
             if (query.sortBy) {
                 const props = query.sortBy
                     .split(',')
@@ -511,21 +526,6 @@
             const pageSize = Number(query.pageSize) || 10;
             if (query.pageSize) {
                 responseData = responseData.slice(0, pageSize);
-            }
-    		
-    		if (query.distinct) {
-                const props = query.distinct.split(',').filter(p => p != '');
-                responseData = Object.values(responseData.reduce((distinct, c) => {
-                    const key = props.map(p => c[p]).join('::');
-                    if (distinct.hasOwnProperty(key) == false) {
-                        distinct[key] = c;
-                    }
-                    return distinct;
-                }, {}));
-            }
-
-            if (query.count) {
-                return responseData.length;
             }
 
             if (query.select) {
@@ -1093,15 +1093,11 @@
 
         return function decorateContext(context, request) {
             // special rules (evaluated at run-time)
-            const get = (collectionName, id) => {
-                return context.storage.get(collectionName, id);
-            };
-            const isOwner = (user, object) => {
-                return user._id == object._ownerId;
+            const parent = (collectionName, id) => {
+                return context.storage.get(collectionName, id)._ownerId;
             };
             context.rules = {
-                get,
-                isOwner
+                parent
             };
 
             context.canAccess = canAccess;
@@ -1206,17 +1202,14 @@
     	users: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
     			email: "peter@abv.bg",
-    			username: "Peter",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
     			email: "george@abv.bg",
-    			username: "George",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
     			email: "admin@abv.bg",
-    			username: "Admin",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
     		}
     	},
@@ -1428,7 +1421,7 @@
     			year: 2015,
     			description: "Medium table",
     			price: 235,
-    			img: "./images/table.png",
+    			img: "/images/table.png",
     			material: "Hardwood",
     			_createdOn: 1615545143015,
     			_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
@@ -1440,7 +1433,7 @@
     			year: 2018,
     			description: "Three-person sofa, blue",
     			price: 1200,
-    			img: "./images/sofa.jpg",
+    			img: "/images/sofa.jpg",
     			material: "Frame - steel, plastic; Upholstery - fabric",
     			_createdOn: 1615545572296,
     			_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
@@ -1452,7 +1445,7 @@
     			year: 2017,
     			description: "Dining chair",
     			price: 180,
-    			img: "./images/chair.jpg",
+    			img: "/images/chair.jpg",
     			material: "Wood laminate; leather",
     			_createdOn: 1615546332126,
     			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
@@ -1485,47 +1478,11 @@
     		}
     	},
     	members: {
-    		"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
+    		m1: {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616236790262,
-    			_updatedOn: 1616236792930
-    		},
-    		"61a19986-3b86-4347-8ca4-8c074ed87591": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			status: "pending",
     			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237188183,
-    			_updatedOn: 1616237189016
-    		},
-    		"8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-    			status: "member",
-    			_createdOn: 1616237193355,
-    			_updatedOn: 1616237195145
-    		},
-    		"9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237231299,
-    			_updatedOn: 1616237235713
-    		},
-    		"280b4a1a-d0f3-4639-aa54-6d9158365152": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237257265,
-    			_updatedOn: 1616237278248
-    		},
-    		"e797fa57-bf0a-4749-8028-72dba715e5f8": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616237272948,
-    			_updatedOn: 1616237293676
+    			_id: "m1"
     		}
     	}
     };
@@ -1539,8 +1496,7 @@
     		".delete": false
     	},
     	members: {
-    		".update": "isOwner(user, get('teams', data.teamId))",
-    		".delete": "isOwner(user, get('teams', data.teamId)) || isOwner(user, data)",
+    		".update": "user._id == parent('teams', data.teamId)",
     		"*": {
     			teamId: {
     				".update": false
