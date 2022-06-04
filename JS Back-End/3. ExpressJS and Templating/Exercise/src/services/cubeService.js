@@ -16,7 +16,7 @@ exports.getAll = (search = '', fromInput, toInput) => {
 
 exports.getOne = cubeId => cubes.find(x => x.id === Number(cubeId));
 
-exports.save = (cube) => {
+exports.save = cube => {
     cubes.push({ id: cubes[cubes.length - 1].id + 1, ...cube });
 
     let textData = JSON.stringify(cubes, '', 4);
