@@ -2,7 +2,7 @@ const { IncomingForm } = require('formidable');
 const { html, getItems, addItem, deleteItem } = require('../util');
 
 
-const catalogPage = (data) => `
+const catalogPage = data => `
 <h1>Catalog</h1>
 <form method="POST" action="/create">
     <label>Name: <input type="text" name="name"></label>
