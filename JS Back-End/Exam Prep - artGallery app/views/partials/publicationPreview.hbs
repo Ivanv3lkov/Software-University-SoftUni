@@ -1,0 +1,7 @@
+<!--If there are publications in the database, show the following view for each created publication-->
+<article class="content-publication">
+    <h1>Title: {{title}}</h1>
+    <!--If no one has shared the post yet, the number should be zero -->
+    <p>Number of people shared the publication: {{shareCount}}</p>
+    <a href="/publications/{{_id}}/details" class="image-details">View publication</a>
+</article>

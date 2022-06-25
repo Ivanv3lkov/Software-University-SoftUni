@@ -68,14 +68,15 @@
 
 .content-publication {
     display: inline;
-    width: 800px;
+    width: 750px;
     border-style: double;
     border-color: #c47d04;
     border-width: 10px;
-    margin: 1em auto;
+    margin: 20px;
     padding: 5px;
     min-height: 135px;
     height: auto;
+    margin-left: 14em;
 }
 
 .content-publication>h1 {
