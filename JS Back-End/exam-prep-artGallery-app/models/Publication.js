@@ -23,7 +23,7 @@ const publicationSchema = new mongoose.Schema({
         ref: 'User'
     },
     usersShared: [{
-        type:mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: 'User'
     }]
 });
