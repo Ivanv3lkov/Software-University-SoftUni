@@ -11,12 +11,8 @@ router.get('/login', isGuest, (req, res) => {
 });
 
 router.post('/login', isGuest, async (req, res) => {
-    const { username, password } = req.body
-
-    if (!password) {
-        return res.render('auth/login', { error: "Please enter a password" });
-    }
-
+    const { username, password } = req.body;
+   
     try {
         const user = await authService.login(username, password);
         const token = await authService.createUserToken(user);

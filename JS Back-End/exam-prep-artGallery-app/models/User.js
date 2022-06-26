@@ -8,16 +8,33 @@ const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: [true, 'Username is required!'],
-        // unique: true,
+        validate: {
+            validator: function() {
+                return this.username.length >= 4;
+            },
+            message: 'Username should be at least 4 characters long!'
+        }
     },
     password: {
         type: String,
         required: [true, 'Password is required!'],
+        validate: {
+            validator: function() {
+                return this.password.length >= 3;
+            },
+            message: 'Password should be at least 3 characters long!'
+        }
     },
     address: {
         type: String,
-        required: true,
-    }, 
+        required: [true, 'Address is required!'],
+        validate: {
+            validator: function() {
+                return this.validate.length <= 20;
+            },
+            message: 'The address should be a maximum of 20 characters long!'
+        }
+    },
     publications: [{
         type: mongoose.Types.ObjectId,
         ref: 'Publication',
@@ -28,12 +45,12 @@ const userSchema = new mongoose.Schema({
     }],
 });
 
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function (next) {
     bcrypt.hash(this.password, SALT_ROUNDS)
-    .then(hashedPassword => {
-        this.password = hashedPassword;
-        next()
-    });
+        .then(hashedPassword => {
+            this.password = hashedPassword;
+            next()
+        });
 });
 
 const User = mongoose.model('User', userSchema);
