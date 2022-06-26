@@ -69,7 +69,7 @@ router.get('/:publicationId/share', isAuth, async (req, res) => {
 
     await publication.save();
     await user.save();
-    res.redirect('/')
+    res.redirect('/');
 })
 
 module.exports = router;
