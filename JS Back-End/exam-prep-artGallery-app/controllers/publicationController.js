@@ -12,20 +12,20 @@ const { preloadPublication, isPublicationAuthor } = require('../middlewares/publ
 router.get('/', async (req, res) => {
     const publications = await publicationService.getAll().lean();
 
-    res.render('publication/gallery', { publications })
+    res.render('publication/gallery', { publications });
 });
 
 router.get('/:publicationId/details', async (req, res) => {
     const publication = await publicationService.getOneDetailed(req.params.publicationId).lean();
     const isAuthor = publication.author._id == req.user?._id;
     //Todo check logged out user
-    const isShared = publication.usersShared.some(x => x._id == req.user?._id)
+    const isShared = publication.usersShared.some(x => x._id == req.user?._id);
 
     res.render('publication/details', { ...publication, isAuthor, isShared });
 })
 
 router.get('/:publicationId/edit', isAuth, preloadPublication, isPublicationAuthor, (req, res) => {
-    res.render('publication/edit', { ...req.publication })
+    res.render('publication/edit', { ...req.publication });
 });
 
 router.post('/:publicationId/edit', isAuth, preloadPublication, isPublicationAuthor, async (req, res) => {
@@ -33,7 +33,7 @@ router.post('/:publicationId/edit', isAuth, preloadPublication, isPublicationAut
         await publicationService.updateOne(req.params.publicationId, req.body);
         res.redirect(`/publications/${req.params.publicationId}/details`);
     } catch (error) {
-        res.render('publication/edit', { ...req.body, error: getErrorMessage(error) })
+        res.render('publication/edit', { ...req.body, error: getErrorMessage(error) });
     }
 });
 
