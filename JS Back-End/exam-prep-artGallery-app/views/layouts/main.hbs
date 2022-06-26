@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
-
-    <!-- Do not forget to change the path to the css file -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-
     <div id="box">
         {{#if error}}
         <div class="error-box">
             <p>{{error}}</p>
         </div>
         {{/if}}
-        
-        <nav>
 
-            <!-- Do not forget to change the path to the image -->
+        <nav>
             <img src="/img/art-logo.png" alt="logo">
             <a href="/">ArtGallery</a>
 
@@ -35,11 +29,9 @@
                 <li><a href="/auth/register">Register</a></li>
                 {{/if}}
             </ul>
-
         </nav>
 
         {{{body}}}
- 
 
         <footer>
             © Js Back-End Retake Exam 2021
