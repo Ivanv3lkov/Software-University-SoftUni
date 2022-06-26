@@ -8,7 +8,6 @@ exports.getOneDetailed = (publicationId) => Publication.findById(publicationId).
 
 exports.create = (publicationData) => Publication.create(publicationData);
 
-exports.updateOne = (publicationId, publicationData) => Publication.updateOne({_id: publicationId}, {$set: publicationData}, {runValidators: true});
+exports.updateOne = (publicationId, publicationData) => Publication.updateOne({ _id: publicationId }, { $set: publicationData }, { runValidators: true });
 
-exports.delete = (publicationId) => Publication.deleteOne({_id: publicationId});
-
+exports.delete = (publicationId) => Publication.deleteOne({ _id: publicationId });
