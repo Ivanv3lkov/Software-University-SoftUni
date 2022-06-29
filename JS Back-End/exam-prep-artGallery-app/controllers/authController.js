@@ -12,7 +12,7 @@ router.get('/login', isGuest, (req, res) => {
 
 router.post('/login', isGuest, async (req, res) => {
     const { username, password } = req.body;
-   
+
     try {
         const user = await authService.login(username, password);
         const token = await authService.createUserToken(user);
@@ -30,16 +30,12 @@ router.get('/register', isGuest, (req, res) => {
 });
 
 router.post('/register', isGuest, async (req, res) => {
-    // const {username, password, repeatPassword, address }
-    const { password, repeatPassword, ...userData } = req.body;
-
-    if (password !== repeatPassword) {
-        return res.render('auth/register', { error: 'Passwords don\'t match' })
-    }
-
+    const { username, password, repeatPassword, address } = req.body;
+    
     try {
         // await authService.create({username, password, repeatPassword, address});
-        const createdUser = await authService.create({ password, ...userData });
+        const createdUser = await authService.create(username, password, repeatPassword, address);
+
         const token = await authService.createUserToken(createdUser);
 
         res.cookie(COOKIE_SESSION_NAME, token, { httpOnly: true });

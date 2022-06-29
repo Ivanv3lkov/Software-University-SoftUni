@@ -4,7 +4,19 @@ const jwt = require('jsonwebtoken');
 
 const { SECRET } = require('../config/env')
 
-exports.create = (userData) => User.create(userData);
+exports.create = async (username, password, repeatPassword, address) => {
+    const existingUser = await User.findOne({ username: username.toLowerCase() });
+   
+    if (existingUser) {
+        throw { message: `This username ${username} already exists` };
+    }
+
+    if (password !== repeatPassword) {
+        throw { message: 'Passwords don\'t match' };
+    }
+
+    return User.create({ username, password, repeatPassword, address });
+}
 
 exports.login = async (username, password) => {
     const user = await User.findOne({ username });

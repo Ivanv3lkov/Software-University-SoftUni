@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Username is required!'],
         validate: {
-            validator: function() {
+            validator: function () {
                 return this.username.length >= 4;
             },
             message: 'Username should be at least 4 characters long!'
@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Password is required!'],
         validate: {
-            validator: function() {
+            validator: function () {
                 return this.password.length >= 3;
             },
             message: 'Password should be at least 3 characters long!'
@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Address is required!'],
         validate: {
-            validator: function() {
+            validator: function () {
                 return this.validate.length <= 20;
             },
             message: 'The address should be a maximum of 20 characters long!'
@@ -44,6 +44,13 @@ const userSchema = new mongoose.Schema({
         ref: 'Publication',
     }],
 });
+
+userSchema.index({ username: 1 }, {
+    collation: {
+        locale: 'en',
+        strength: 1
+    }
+})
 
 userSchema.pre('save', function (next) {
     bcrypt.hash(this.password, SALT_ROUNDS)
